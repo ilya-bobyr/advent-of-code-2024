@@ -28,7 +28,7 @@ haskell_toolchains = use_extension(
     "haskell_toolchains",
 )
 haskell_toolchains.bindists(
-    ghcopts = ["-XImportQualifiedPost"],
+    ghcopts = ["-XGHC2021"],
     version = "9.8.2",
 )
 

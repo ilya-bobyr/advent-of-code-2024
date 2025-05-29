@@ -5,7 +5,7 @@ The module fetches ormolu binary to be used by bazel
 VERSION = "0.8.0.0"
 
 WORKSPACE_WIDE_GHC_EXTENSIONS = [
-    "ImportQualifiedPost",
+    "GHC2021",
 ]
 
 URL = ("https://github.com/tweag/ormolu/releases/download/" +
