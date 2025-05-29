@@ -1,0 +1,60 @@
+load("@buildifier_prebuilt//:rules.bzl", "buildifier")
+load("@rules_shell//shell:sh_binary.bzl", "sh_binary")
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
+load(":ormolu.bzl", "ormolu_local_invocation")
+
+BUILDIFIER_EXCLUDES = [
+    "./.git/*",
+]
+
+buildifier(
+    name = "buildifier",
+    exclude_patterns = BUILDIFIER_EXCLUDES,
+    lint_mode = "fix",
+    mode = "fix",
+    visibility = ["//visibility:public"],
+)
+
+buildifier(
+    name = "buildifier.check",
+    exclude_patterns = BUILDIFIER_EXCLUDES,
+    lint_mode = "warn",
+    mode = "diff",
+)
+
+sh_test(
+    name = "buildifier-lint",
+    size = "small",
+    # TODO Can I just run the buildifer binary directly?
+    # The script does nothing but just runs it.
+    srcs = ["buildifier-lint.sh"],
+    data = [":buildifier.check"],
+    env = {
+        "buildifier_path": "$(location :buildifier.check)",
+    },
+    tags = [
+        # buildifier will be accessing the workspace source, looking for it via the
+        # `BUILD_WORKSPACE_DIRECTORY` environment variable.  So we want to make sure it is executed
+        # locally.
+        "local",
+    ],
+)
+
+ormolu_local_invocation(
+    sh_binary,
+    "ormolu-format",
+    "format",
+    {
+        # Allow an alias to be defined at the top level.
+        "visibility": ["//:__pkg__"],
+    },
+)
+
+ormolu_local_invocation(
+    sh_test,
+    "ormolu-lint",
+    "lint",
+    {
+        "size": "small",
+    },
+)

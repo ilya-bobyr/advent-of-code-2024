@@ -1,0 +1,35 @@
+load("@bazel_env.bzl", "bazel_env")
+
+# Set all target’s visibility in this package to "public".
+package(default_visibility = ["//visibility:public"])
+
+alias(
+    name = "buildifier",
+    actual = "//tools:buildifier",
+)
+
+alias(
+    name = "buildozer",
+    actual = "@buildozer//:buildozer",
+)
+
+bazel_env(
+    name = "bazel_env",
+    toolchains = {},
+    tools = {
+        "buildifier": "//:buildifier",
+        "buildozer": "//:buildozer",
+        "ormolu": "//:ormolu-format",
+    },
+)
+
+alias(
+    name = "ormolu-format",
+    actual = "//tools:ormolu-format",
+)
+
+exports_files([
+    # This is necessary in order for the development tools, such as `ormolu` and
+    # `buildifier` to be able to find the location of the actual source tree.
+    "WORKSPACE.bazel",
+])

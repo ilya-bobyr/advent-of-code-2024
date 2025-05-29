@@ -1,2 +1,8 @@
+# Bazel build artifacts
+/bazel-bin
+/bazel-2024
+/bazel-out
+/bazel-testlogs
+
 # Test inputs for the problems
 /day??/input*

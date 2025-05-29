@@ -1,0 +1,6 @@
+# TODO How do I move this into `MODULE.bazel`?
+#
+# ormolu binary for haskell linting
+load("//tools:ormolu.bzl", "ormolu")
+
+ormolu(name = "ormolu")

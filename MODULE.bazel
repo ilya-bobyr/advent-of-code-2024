@@ -1,0 +1,140 @@
+module(
+    name = "advent-of-code-2024",
+    version = "0.1",
+)
+
+# === bazel_env ===
+
+bazel_dep(name = "bazel_env.bzl", version = "0.3.2", dev_dependency = True)
+
+# === Buildifier
+
+bazel_dep(
+    name = "buildifier_prebuilt",
+    version = "8.0.3",
+    dev_dependency = True,
+)
+
+# === Buildozer ===
+
+bazel_dep(name = "buildozer", version = "8.0.3")
+
+# === Haskell ===
+
+bazel_dep(name = "rules_haskell", version = "1.0")
+
+haskell_toolchains = use_extension(
+    "@rules_haskell//extensions:haskell_toolchains.bzl",
+    "haskell_toolchains",
+)
+haskell_toolchains.bindists(
+    ghcopts = ["-XImportQualifiedPost"],
+    version = "9.8.2",
+)
+
+stack = use_extension(
+    "@rules_haskell//extensions:stack_snapshot.bzl",
+    "stack_snapshot",
+)
+stack.snapshot(name = "lts-23.24")
+use_repo(
+    stack,
+    "stackage",
+    "stackage-exe",
+    "stackage-unpinned",
+)
+
+[
+    stack.package(
+        name = package,
+    )
+    for package in [
+        # Core libraries
+        "base",
+        "optparse-applicative",
+        "text",
+
+        # Other libraries
+        # "bytestring",
+        # "containers",
+        # "deepseq",
+        # "mtl",
+        # "vector",
+
+        # # For tests
+        # "lens-family-core",
+        # "data-default-class",
+        # "proto-lens",
+        # "lens-family",
+    ]
+]
+
+# stack.package(
+#     name = "attoparsec",
+#     components =
+#         [
+#             # attoparsec contains an internal library which is not exposed publicly,
+#             # but required to build the public library, hence the declaration of
+#             # those 2 components, as well as the explicit declaration of the
+#             # dependency between them.
+#             "lib",
+#             "lib:attoparsec-internal",
+#         ],
+#     components_dependencies = {
+#         "lib:attoparsec": ["lib:attoparsec-internal"],
+#     },
+# )
+
+# stack.package(
+#     name = "zlib",
+#     extra_deps = ["@zlib.dev//:zlib"],
+# )
+
+# stack.package(
+#     name = "ghc-paths",
+#     vendored = "@rules_haskell//tools/ghc-paths",
+# )
+#
+# stack.package(
+#     name = "proto-lens-protoc",
+#     components = [
+#         "lib",
+#         "exe",
+#     ],
+#     setup_deps = ["@Cabal//:Cabal"],
+# )
+
+# [
+#     # See https://github.com/tweag/rules_haskell/issues/1871
+#     stack.package(
+#         name = package,
+#         setup_deps = ["@Cabal//:Cabal"],
+#     )
+#     for package in [
+#         "HUnit",
+#         "bifunctors",
+#         "call-stack",
+#         "generic-deriving",
+#         "mono-traversable",
+#         "proto-lens-runtime",
+#         "quickcheck-io",
+#         "transformers-compat",
+#         "type-errors",
+#         "typed-process",
+#         "unliftio-core",
+#     ]
+# ]
+
+# This uses an unpinned version of stack_snapshot, meaning that stack is invoked on every build.
+# To switch to pinned stackage dependencies, run `bazel run @stackage-unpinned//:pin` and
+# uncomment the following line.
+#
+# stack.stack_snapshot_json(label = "//:stackage_snapshot.json")
+# stack.snapshot(
+#     local_snapshot = "@rules_haskell//:stackage_snapshot.yaml",
+# )
+
+# === Shell ===
+
+bazel_dep(name = "rules_shell", version = "0.4.1")
+bazel_dep(name = "rules_sh", version = "0.5.0")
