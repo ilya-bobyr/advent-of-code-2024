@@ -1014,7 +1014,7 @@
     "@@rules_haskell~//extensions:stack_snapshot.bzl%stack_snapshot": {
       "general": {
         "bzlTransitiveDigest": "+ZNhU9T5hOs/lM4KS+fQAXTi/whGLAk6QQyp4OkpQ9o=",
-        "usagesDigest": "E/G7VzGv18W1gji7PYJkqE7qH8BGWb5ZS03CnLEzIYw=",
+        "usagesDigest": "elAwPlSSSxd6b24LA12+E64b1A2SYlp6OaMlQ0uU+1s=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -1042,8 +1042,9 @@
               "snapshot": "lts-23.24",
               "packages": [
                 "base",
-                "optparse-applicative",
-                "text"
+                "text",
+                "containers",
+                "parsec"
               ],
               "flags": {},
               "netrc": "",
@@ -1063,8 +1064,9 @@
               "snapshot": "lts-23.24",
               "packages": [
                 "base",
-                "optparse-applicative",
-                "text"
+                "text",
+                "containers",
+                "parsec"
               ],
               "flags": {},
               "haddock": true,

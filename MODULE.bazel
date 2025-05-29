@@ -54,12 +54,13 @@ use_repo(
     for package in [
         # Core libraries
         "base",
-        "optparse-applicative",
         "text",
 
         # Other libraries
+        "containers",
+        "parsec",
+
         # "bytestring",
-        # "containers",
         # "deepseq",
         # "mtl",
         # "vector",
