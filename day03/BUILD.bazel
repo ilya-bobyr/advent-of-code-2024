@@ -1,0 +1,10 @@
+load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
+
+haskell_binary(
+    name = "day03",
+    srcs = glob(["Main.hs"]),
+    deps = [
+        "@stackage//:base",
+        "@stackage//:parsec",
+    ],
+)
