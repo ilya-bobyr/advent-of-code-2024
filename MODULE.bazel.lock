@@ -648,7 +648,7 @@
     "@@rules_haskell~//extensions:haskell_toolchains.bzl%haskell_toolchains": {
       "general": {
         "bzlTransitiveDigest": "Ni+mmFKlZszVo2CyLwKYfVNgEEtAZtXoOQCQmNK3oPw=",
-        "usagesDigest": "SST4A59nDgFiKib7en1PBuwvXrc7D+88nFPaZlWjN0k=",
+        "usagesDigest": "ly1mZrloC6y7InZGfn4ieXu4XNRd1VJ/0h2xHXwm1vQ=",
         "recordedFileInputs": {
           "@@rules_haskell~//haskell/private/ghc_bindist_generated.json": "0be7e35cb98d664beef98aef76b3278597ea9bc14d7e2e0c212be82379ecb5aa"
         },
@@ -661,6 +661,7 @@
             "attributes": {
               "version": "9.8.2",
               "ghcopts": [
+                "-Wall",
                 "-XGHC2021"
               ],
               "haddock_flags": [],
@@ -684,6 +685,7 @@
             "attributes": {
               "version": "9.8.2",
               "ghcopts": [
+                "-Wall",
                 "-XGHC2021"
               ],
               "haddock_flags": [],
@@ -707,6 +709,7 @@
             "attributes": {
               "version": "9.8.2",
               "ghcopts": [
+                "-Wall",
                 "-XGHC2021"
               ],
               "haddock_flags": [],
@@ -730,6 +733,7 @@
             "attributes": {
               "version": "9.8.2",
               "ghcopts": [
+                "-Wall",
                 "-XGHC2021"
               ],
               "haddock_flags": [],
@@ -753,6 +757,7 @@
             "attributes": {
               "version": "9.8.2",
               "ghcopts": [
+                "-Wall",
                 "-XGHC2021"
               ],
               "haddock_flags": [],
