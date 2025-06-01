@@ -1014,7 +1014,7 @@
     "@@rules_haskell~//extensions:stack_snapshot.bzl%stack_snapshot": {
       "general": {
         "bzlTransitiveDigest": "+ZNhU9T5hOs/lM4KS+fQAXTi/whGLAk6QQyp4OkpQ9o=",
-        "usagesDigest": "elAwPlSSSxd6b24LA12+E64b1A2SYlp6OaMlQ0uU+1s=",
+        "usagesDigest": "XJ6aj65q9PesD1wJLTYWMLIlsfVhnj+Bv0OW3rKF5wU=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -1043,6 +1043,7 @@
               "packages": [
                 "base",
                 "text",
+                "array",
                 "containers",
                 "parsec"
               ],
@@ -1065,6 +1066,7 @@
               "packages": [
                 "base",
                 "text",
+                "array",
                 "containers",
                 "parsec"
               ],

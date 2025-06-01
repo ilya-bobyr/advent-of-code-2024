@@ -57,6 +57,7 @@ use_repo(
         "text",
 
         # Other libraries
+        "array",
         "containers",
         "parsec",
 
