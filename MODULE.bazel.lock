@@ -51,8 +51,6 @@
     "https://bcr.bazel.build/modules/rules_cc/0.0.8/MODULE.bazel": "964c85c82cfeb6f3855e6a07054fdb159aced38e99a5eecf7bce9d53990afa3e",
     "https://bcr.bazel.build/modules/rules_cc/0.0.9/MODULE.bazel": "836e76439f354b89afe6a911a7adf59a6b2518fafb174483ad78a2a2fde7b1c5",
     "https://bcr.bazel.build/modules/rules_cc/0.0.9/source.json": "1f1ba6fea244b616de4a554a0f4983c91a9301640c8fe0dd1d410254115c8430",
-    "https://bcr.bazel.build/modules/rules_haskell/1.0/MODULE.bazel": "49b531ff82404fe5dd7be526a652ba799e732a83abbdf265ecce89fcbb45804c",
-    "https://bcr.bazel.build/modules/rules_haskell/1.0/source.json": "ab1c0d0b5e7c399333f6804771b0b663cdaee9e55980894f86d9395c87cc296f",
     "https://bcr.bazel.build/modules/rules_java/4.0.0/MODULE.bazel": "5a78a7ae82cd1a33cef56dc578c7d2a46ed0dca12643ee45edbb8417899e6f74",
     "https://bcr.bazel.build/modules/rules_java/5.3.5/MODULE.bazel": "a4ec4f2db570171e3e5eb753276ee4b389bae16b96207e9d3230895c99644b86",
     "https://bcr.bazel.build/modules/rules_java/6.1.0/MODULE.bazel": "5a718e43a934f342754609021d256396d8c92fd07da42b39a7174e2e16a1c23e",
@@ -624,8 +622,8 @@
     },
     "@@rules_haskell~//extensions:ghc_version.bzl%ghc_default_version": {
       "general": {
-        "bzlTransitiveDigest": "1T6mg5oKStVxecF1dN7Hi3uVP//MQOPlL0uQBcpO3bw=",
-        "usagesDigest": "I8HWac/HOxoJJQjRlVyrrlt0E5uAb9atD/c2sINVwus=",
+        "bzlTransitiveDigest": "wwq7IP3Dnepz+GacPPmP9n7BvcK4H5Fk8s+ZyySi2hk=",
+        "usagesDigest": "5WOqJQHXmhCAh8A6wCy5uPezO3cPsXpqpDbMAkcoToQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -647,67 +645,19 @@
     },
     "@@rules_haskell~//extensions:haskell_toolchains.bzl%haskell_toolchains": {
       "general": {
-        "bzlTransitiveDigest": "Ni+mmFKlZszVo2CyLwKYfVNgEEtAZtXoOQCQmNK3oPw=",
-        "usagesDigest": "ly1mZrloC6y7InZGfn4ieXu4XNRd1VJ/0h2xHXwm1vQ=",
+        "bzlTransitiveDigest": "49aW7zTJzebv/LkALMXtvc8mBwyYl4u5Wte0Tmhn71E=",
+        "usagesDigest": "iY5kRnlbhLuitu8DhItoT9HbRr0YVIkXUbvtGp5w8Dc=",
         "recordedFileInputs": {
-          "@@rules_haskell~//haskell/private/ghc_bindist_generated.json": "0be7e35cb98d664beef98aef76b3278597ea9bc14d7e2e0c212be82379ecb5aa"
+          "@@rules_haskell~//haskell/private/ghc_bindist_generated.json": "1dcecc63af99aae3ee5b466a2962eef4c47069ec00423690ddc7fb2bb0e958d3"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
         "generatedRepoSpecs": {
-          "rules_haskell_ghc_linux_amd64": {
-            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
-            "ruleClassName": "_ghc_bindist",
-            "attributes": {
-              "version": "9.8.2",
-              "ghcopts": [
-                "-Wall",
-                "-XGHC2021"
-              ],
-              "haddock_flags": [],
-              "repl_ghci_args": [],
-              "cabalopts": [],
-              "target": "linux_amd64",
-              "locale": ""
-            }
-          },
-          "rules_haskell_ghc_linux_amd64-toolchain": {
-            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
-            "ruleClassName": "_ghc_bindist_toolchain",
-            "attributes": {
-              "bindist_name": "rules_haskell_ghc_linux_amd64",
-              "target": "linux_amd64"
-            }
-          },
-          "rules_haskell_ghc_linux_arm64": {
-            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
-            "ruleClassName": "_ghc_bindist",
-            "attributes": {
-              "version": "9.8.2",
-              "ghcopts": [
-                "-Wall",
-                "-XGHC2021"
-              ],
-              "haddock_flags": [],
-              "repl_ghci_args": [],
-              "cabalopts": [],
-              "target": "linux_arm64",
-              "locale": ""
-            }
-          },
-          "rules_haskell_ghc_linux_arm64-toolchain": {
-            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
-            "ruleClassName": "_ghc_bindist_toolchain",
-            "attributes": {
-              "bindist_name": "rules_haskell_ghc_linux_arm64",
-              "target": "linux_arm64"
-            }
-          },
           "rules_haskell_ghc_darwin_amd64": {
             "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
             "ruleClassName": "_ghc_bindist",
             "attributes": {
-              "version": "9.8.2",
+              "version": "9.8.4",
               "ghcopts": [
                 "-Wall",
                 "-XGHC2021"
@@ -716,7 +666,9 @@
               "repl_ghci_args": [],
               "cabalopts": [],
               "target": "darwin_amd64",
-              "locale": ""
+              "locale": "",
+              "dist": {},
+              "variant": {}
             }
           },
           "rules_haskell_ghc_darwin_amd64-toolchain": {
@@ -731,7 +683,7 @@
             "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
             "ruleClassName": "_ghc_bindist",
             "attributes": {
-              "version": "9.8.2",
+              "version": "9.8.4",
               "ghcopts": [
                 "-Wall",
                 "-XGHC2021"
@@ -740,7 +692,9 @@
               "repl_ghci_args": [],
               "cabalopts": [],
               "target": "darwin_arm64",
-              "locale": ""
+              "locale": "",
+              "dist": {},
+              "variant": {}
             }
           },
           "rules_haskell_ghc_darwin_arm64-toolchain": {
@@ -751,11 +705,63 @@
               "target": "darwin_arm64"
             }
           },
+          "rules_haskell_ghc_linux_amd64": {
+            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
+            "ruleClassName": "_ghc_bindist",
+            "attributes": {
+              "version": "9.8.4",
+              "ghcopts": [
+                "-Wall",
+                "-XGHC2021"
+              ],
+              "haddock_flags": [],
+              "repl_ghci_args": [],
+              "cabalopts": [],
+              "target": "linux_amd64",
+              "locale": "",
+              "dist": {},
+              "variant": {}
+            }
+          },
+          "rules_haskell_ghc_linux_amd64-toolchain": {
+            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
+            "ruleClassName": "_ghc_bindist_toolchain",
+            "attributes": {
+              "bindist_name": "rules_haskell_ghc_linux_amd64",
+              "target": "linux_amd64"
+            }
+          },
+          "rules_haskell_ghc_linux_arm64": {
+            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
+            "ruleClassName": "_ghc_bindist",
+            "attributes": {
+              "version": "9.8.4",
+              "ghcopts": [
+                "-Wall",
+                "-XGHC2021"
+              ],
+              "haddock_flags": [],
+              "repl_ghci_args": [],
+              "cabalopts": [],
+              "target": "linux_arm64",
+              "locale": "",
+              "dist": {},
+              "variant": {}
+            }
+          },
+          "rules_haskell_ghc_linux_arm64-toolchain": {
+            "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
+            "ruleClassName": "_ghc_bindist_toolchain",
+            "attributes": {
+              "bindist_name": "rules_haskell_ghc_linux_arm64",
+              "target": "linux_arm64"
+            }
+          },
           "rules_haskell_ghc_windows_amd64": {
             "bzlFile": "@@rules_haskell~//haskell:ghc_bindist.bzl",
             "ruleClassName": "_ghc_bindist",
             "attributes": {
-              "version": "9.8.2",
+              "version": "9.8.4",
               "ghcopts": [
                 "-Wall",
                 "-XGHC2021"
@@ -764,7 +770,9 @@
               "repl_ghci_args": [],
               "cabalopts": [],
               "target": "windows_amd64",
-              "locale": ""
+              "locale": "",
+              "dist": {},
+              "variant": {}
             }
           },
           "rules_haskell_ghc_windows_amd64-toolchain": {
@@ -797,10 +805,10 @@
             "ruleClassName": "all_toolchains",
             "attributes": {
               "toolchains": [
-                "\ntoolchain(\n    name = \"{}\",\n    toolchain_type = \"@rules_haskell//haskell:toolchain\",\n    toolchain = \"@rules_haskell_ghc_linux_amd64//:toolchain-impl\",\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n)\n",
-                "\ntoolchain(\n    name = \"{}\",\n    toolchain_type = \"@rules_haskell//haskell:toolchain\",\n    toolchain = \"@rules_haskell_ghc_linux_arm64//:toolchain-impl\",\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:arm64\"],\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:arm64\"],\n)\n",
                 "\ntoolchain(\n    name = \"{}\",\n    toolchain_type = \"@rules_haskell//haskell:toolchain\",\n    toolchain = \"@rules_haskell_ghc_darwin_amd64//:toolchain-impl\",\n    exec_compatible_with = [\"@platforms//os:osx\", \"@platforms//cpu:x86_64\"],\n    target_compatible_with = [\"@platforms//os:osx\", \"@platforms//cpu:x86_64\"],\n)\n",
                 "\ntoolchain(\n    name = \"{}\",\n    toolchain_type = \"@rules_haskell//haskell:toolchain\",\n    toolchain = \"@rules_haskell_ghc_darwin_arm64//:toolchain-impl\",\n    exec_compatible_with = [\"@platforms//os:osx\", \"@platforms//cpu:arm64\"],\n    target_compatible_with = [\"@platforms//os:osx\", \"@platforms//cpu:arm64\"],\n)\n",
+                "\ntoolchain(\n    name = \"{}\",\n    toolchain_type = \"@rules_haskell//haskell:toolchain\",\n    toolchain = \"@rules_haskell_ghc_linux_amd64//:toolchain-impl\",\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n)\n",
+                "\ntoolchain(\n    name = \"{}\",\n    toolchain_type = \"@rules_haskell//haskell:toolchain\",\n    toolchain = \"@rules_haskell_ghc_linux_arm64//:toolchain-impl\",\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:arm64\"],\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:arm64\"],\n)\n",
                 "\ntoolchain(\n    name = \"{}\",\n    toolchain_type = \"@rules_haskell//haskell:toolchain\",\n    toolchain = \"@rules_haskell_ghc_windows_amd64//:toolchain-impl\",\n    exec_compatible_with = [\"@platforms//os:windows\", \"@platforms//cpu:x86_64\"],\n    target_compatible_with = [\"@platforms//os:windows\", \"@platforms//cpu:x86_64\"],\n)\n"
               ]
             }
@@ -842,8 +850,8 @@
     },
     "@@rules_haskell~//extensions:rules_haskell_dependencies.bzl%rules_haskell_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "2Iq/6lvQIa7Cn4vM321VXGaPwDIOIKqFkQVZB+LjONo=",
-        "usagesDigest": "+YkgTrqm3VGr41/QlmunHpNs530+M/EVfn+AlUb8LiI=",
+        "bzlTransitiveDigest": "FehENwvhCu6oY7jrgIAXkHwZDKQ0xS6prruJSwhre0k=",
+        "usagesDigest": "XfcRCMg5s7tZQPakJ2JIK9VEVnCiAoXNCIXzc83G7jA=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -879,7 +887,7 @@
               "stack_update": "@@rules_haskell~~rules_haskell_dependencies~rules_haskell_stack_update//:stack_update",
               "vendored_packages": {},
               "snapshot": "",
-              "local_snapshot": "@@rules_haskell~//:stackage_snapshot_9.4.6.yaml",
+              "local_snapshot": "@@rules_haskell~//:stackage_snapshot_9.4.8.yaml",
               "packages": [
                 "base",
                 "bytestring",
@@ -910,7 +918,7 @@
               "extra_deps": {},
               "vendored_packages": {},
               "snapshot": "",
-              "local_snapshot": "@@rules_haskell~//:stackage_snapshot_9.4.6.yaml",
+              "local_snapshot": "@@rules_haskell~//:stackage_snapshot_9.4.8.yaml",
               "packages": [
                 "base",
                 "bytestring",
@@ -1013,8 +1021,8 @@
     },
     "@@rules_haskell~//extensions:stack_snapshot.bzl%stack_snapshot": {
       "general": {
-        "bzlTransitiveDigest": "+ZNhU9T5hOs/lM4KS+fQAXTi/whGLAk6QQyp4OkpQ9o=",
-        "usagesDigest": "XJ6aj65q9PesD1wJLTYWMLIlsfVhnj+Bv0OW3rKF5wU=",
+        "bzlTransitiveDigest": "ClQl/3UHzyApR5nJMKKT+6f399dVoXBM9vi/LYvMk0M=",
+        "usagesDigest": "mHEly1ShSFG5UqVRO0f6tg0jTcIlJQ2RiUYzgga8nWg=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -1039,7 +1047,7 @@
               "stack": "@@rules_haskell~~rules_haskell_dependencies~rules_haskell_stack//:stack",
               "stack_update": "@@rules_haskell~~stack_snapshot~rules_haskell_stack_update//:stack_update",
               "vendored_packages": {},
-              "snapshot": "lts-23.24",
+              "snapshot": "lts-23.25",
               "packages": [
                 "base",
                 "text",
@@ -1062,7 +1070,7 @@
               "stack_update": "'@@rules_haskell~~rules_haskell_dependencies~rules_haskell_stack_update//:stack_update'",
               "extra_deps": {},
               "vendored_packages": {},
-              "snapshot": "lts-23.24",
+              "snapshot": "lts-23.25",
               "packages": [
                 "base",
                 "text",
@@ -1132,7 +1140,7 @@
     "@@rules_nodejs~//nodejs:extensions.bzl%node": {
       "general": {
         "bzlTransitiveDigest": "KOk+Te5m8n3d0B9F5+lgyrzLbtEzqeqWset0MugBbOY=",
-        "usagesDigest": "MazYYiLaDzcLjqMbI6dcDN6I+/Ey9xcwG1e9y4rdO8E=",
+        "usagesDigest": "0fY98zY7+TbqMQ9SV+PrVjDDrKqa8+CjoswfWc1mZZw=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},

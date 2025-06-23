@@ -23,23 +23,33 @@ bazel_dep(name = "buildozer", version = "8.0.3")
 
 bazel_dep(name = "rules_haskell", version = "1.0")
 
+# Bazel Central Registry has only version 1.0, which is quite old by now.  In particular, it does
+# not support GHC 9.8.4, and stackage has only snapshots for 9.8.4.  A version mismatch somehow
+# cases the `array` library version to be 0.5.6.0, rather than 0.5.8.0, one packaged with GHC 9.8.x.
+git_override(
+    module_name = "rules_haskell",
+    remote = "https://github.com/tweag/rules_haskell",
+    commit = "3322610caba2ce8f17ec010b2f76a366a06f97c4",
+)
+
 haskell_toolchains = use_extension(
     "@rules_haskell//extensions:haskell_toolchains.bzl",
     "haskell_toolchains",
 )
+# Switch to GHC2024 after upgrading to GHC 9.10.1 or newer.
 haskell_toolchains.bindists(
     ghcopts = [
         "-Wall",
         "-XGHC2021",
     ],
-    version = "9.8.2",
+    version = "9.8.4",
 )
 
 stack = use_extension(
     "@rules_haskell//extensions:stack_snapshot.bzl",
     "stack_snapshot",
 )
-stack.snapshot(name = "lts-23.24")
+stack.snapshot(name = "lts-23.25")
 use_repo(
     stack,
     "stackage",
