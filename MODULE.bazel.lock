@@ -1022,7 +1022,7 @@
     "@@rules_haskell~//extensions:stack_snapshot.bzl%stack_snapshot": {
       "general": {
         "bzlTransitiveDigest": "ClQl/3UHzyApR5nJMKKT+6f399dVoXBM9vi/LYvMk0M=",
-        "usagesDigest": "mHEly1ShSFG5UqVRO0f6tg0jTcIlJQ2RiUYzgga8nWg=",
+        "usagesDigest": "m/Gem58yIViHifpP96J5+rv0zuoFTnKxpXw8LKO9bLM=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -1053,7 +1053,8 @@
                 "text",
                 "array",
                 "containers",
-                "parsec"
+                "parsec",
+                "integer-logarithms"
               ],
               "flags": {},
               "netrc": "",
@@ -1076,7 +1077,8 @@
                 "text",
                 "array",
                 "containers",
-                "parsec"
+                "parsec",
+                "integer-logarithms"
               ],
               "flags": {},
               "haddock": true,

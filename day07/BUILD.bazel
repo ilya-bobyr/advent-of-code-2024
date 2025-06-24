@@ -1,0 +1,11 @@
+load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
+
+haskell_binary(
+    name = "day07",
+    srcs = glob(["Main.hs"]),
+    deps = [
+        "@stackage//:base",
+        "@stackage//:integer-logarithms",
+        "@stackage//:parsec",
+    ],
+)

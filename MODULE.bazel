@@ -71,6 +71,8 @@ use_repo(
         "containers",
         "parsec",
 
+        "integer-logarithms",
+
         # "bytestring",
         # "deepseq",
         # "mtl",
