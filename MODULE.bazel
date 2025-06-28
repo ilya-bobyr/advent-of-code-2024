@@ -36,20 +36,19 @@ haskell_toolchains = use_extension(
     "@rules_haskell//extensions:haskell_toolchains.bzl",
     "haskell_toolchains",
 )
-# Switch to GHC2024 after upgrading to GHC 9.10.1 or newer.
 haskell_toolchains.bindists(
     ghcopts = [
         "-Wall",
-        "-XGHC2021",
+        "-XGHC2024",
     ],
-    version = "9.8.4",
+    version = "9.10.2",
 )
 
 stack = use_extension(
     "@rules_haskell//extensions:stack_snapshot.bzl",
     "stack_snapshot",
 )
-stack.snapshot(name = "lts-23.25")
+stack.snapshot(name = "nightly-2025-06-18")
 use_repo(
     stack,
     "stackage",
